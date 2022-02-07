@@ -12,47 +12,57 @@ public class Administrator {
 	/**名前*/
 	private String name;
 	/**メールアドレス*/
-	private String mail;
+	private String mailAddress;
 	/**パスワード*/
 	private String password;
-	
+
 	public Administrator() {
 	}
 	
-	public Administrator(Integer id, String name, String mail, String password) {
+	public Administrator(Integer id, String name, String mailAddress, String password) {
 		this.id = id;
 		this.name = name;
-		this.mail = mail;
+		this.mailAddress = mailAddress;
 		this.password = password;
 	}
-	
+
 	public Integer getId() {
 		return id;
 	}
+
 	public void setId(Integer id) {
 		this.id = id;
 	}
+
 	public String getName() {
 		return name;
 	}
+
 	public void setName(String name) {
 		this.name = name;
 	}
-	public String getMail() {
-		return mail;
+
+	public String getMailAddress() {
+		return mailAddress;
 	}
-	public void setMail(String mail) {
-		this.mail = mail;
+
+	public void setMailAddress(String mailAddress) {
+		this.mailAddress = mailAddress;
 	}
+
 	public String getPassword() {
 		return password;
 	}
+
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	
+
 	@Override
 	public String toString() {
-		return "Administrator [id=" + id + ", name=" + name + ", mail=" + mail + ", password=" + password + "]";
+		return "Administrator [id=" + id + ", name=" + name + ", mailAddress=" + mailAddress + ", password=" + password
+				+ "]";
 	}
+	
+
 }
