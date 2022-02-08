@@ -24,4 +24,14 @@ public class EmployeeService {
 		return employeeList;
 	}
 	
+	/**
+	 * 主キー検索を呼び出します
+	 * @param id
+	 * @return 該当従業員情報を返します
+	 */
+	public Employee showDetail(Integer id) {
+		Employee employee = employeeRepository.load(id);
+		return employee;
+	}
+	
 }
