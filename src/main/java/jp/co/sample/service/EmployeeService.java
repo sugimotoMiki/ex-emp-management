@@ -34,4 +34,12 @@ public class EmployeeService {
 		return employee;
 	}
 	
+	/**
+	 * 従業員情報を更新します
+	 * @param employee
+	 */
+	public void update(Employee employee) {
+		employeeRepository.update(employee);
+	}
+	
 }
