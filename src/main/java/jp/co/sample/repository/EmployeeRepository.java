@@ -52,7 +52,7 @@ public class EmployeeRepository {
 	 * @return
 	 */
 	public Employee load(Integer id) {
-		String sql = "select name,image,gender,hire_date,mail_address,zip_code,address,telephone,salary,characteristics,dependents_count from employees where id=:id";
+		String sql = "select id,name,image,gender,hire_date,mail_address,zip_code,address,telephone,salary,characteristics,dependents_count from employees where id=:id";
 		SqlParameterSource param = new MapSqlParameterSource("id", id);
 		Employee employee = template.queryForObject(sql, param, EMPLOYEE_ROW_MAPPER);
 		return employee;
