@@ -1,5 +1,6 @@
 package jp.co.sample.controller;
 
+import java.sql.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -54,6 +55,15 @@ public class EmployaeeController {
 			return showDetail(form.getId(), model);
 		}
 		Employee employee = employeeService.showDetail(Integer.parseInt(form.getId()));
+		employee.setName(form.getName());
+		employee.setGender(form.getGender());
+		employee.setHireDate(Date.valueOf(form.getHireDate()));
+		employee.setMailAddress(form.getMailAddress());
+		employee.setZipCode(form.getZipCode());
+		employee.setAddress(form.getAddress());
+		employee.setTelephone(form.getTelephone());
+		employee.setSalary(form.getSalary());
+		employee.setCharacteristics(form.getCharacteristics());
 		employee.setDependentsCount(Integer.parseInt(form.getDependentsCount()));
 		employeeService.update(employee);
 		return "redirect:/employee/showList";
