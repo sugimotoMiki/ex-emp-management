@@ -75,7 +75,7 @@
 							      従業員名
 							    </th>
 							    <td>
-							     <span th:text="${employee.name}">山田花子</span>
+							     <input type="text" name="name" th:value="${employee.name}">
 							    </td>
 							  </tr>
 							  <tr>
@@ -83,7 +83,6 @@
 							      写真
 							    </th>
 							    <td>
-							      
 							      <img th:src="@{/img/} + ${employee.image}">
 							    </td>
 							  </tr>
@@ -92,7 +91,7 @@
 							      性別
 							    </th>
 							    <td>
-							      <span  th:text="${employee.gender}">女性</span>
+							      <input type="text" name="gender" th:value="${employee.gender}">
 							    </td>
 							  </tr>
 							  <tr>
@@ -100,7 +99,7 @@
 							      入社日
 							    </th>
 							    <td>
-							      <span  th:text="${employee.hireDate}">2012/11/29</span>
+							      <input type="text" name="hireDate" th:value="${employee.hireDate}">
 							    </td>
 							  </tr>
 							  <tr>
@@ -108,7 +107,7 @@
 							      メールアドレス
 							    </th>
 							    <td>
-							      <span th:text="${employee.mailAddress}">yamada@sample.com</span>
+							      <input type="text" name="mailAddress" th:value="${employee.mailAddress}">
 							    </td>
 							  </tr>
 							  <tr>
@@ -116,7 +115,7 @@
 							      郵便番号
 							    </th>
 							    <td>
-							      <span th:text="${employee.zipCode}">111-1111</span>
+							      <input type="text" name="zipCode" th:value="${employee.zipCode}">
 							    </td>
 							  </tr>
 							  <tr>
@@ -124,7 +123,7 @@
 							      住所
 							    </th>
 							    <td>
-							      <span  th:text="${employee.Address}">東京都新宿区1-1-1</span>
+							      <input type="text" name="Address" th:value="${employee.Address}">
 							    </td>
 							  </tr>
 							  <tr>
@@ -132,7 +131,7 @@
 							      電話番号
 							    </th>
 							    <td>
-							      <span  th:text="${employee.telephone}">090-0000-0000</span>
+							      <input type="text" name="telephone" th:value="${employee.telephone}">
 							    </td>
 							  </tr>
 							  <tr>
@@ -140,7 +139,7 @@
 							      給料
 							    </th>
 							    <td>
-							      <span  th:text="${employee.salary}">400000円</span>
+							      <input type="text" name="salary" th:value="${employee.salary}">
 							    </td>
 							  </tr>
 							  <tr>
@@ -148,7 +147,7 @@
 							      特性
 							    </th>
 							    <td>
-							      <span th:text="${employee.characteristics}">明るく素直な性格です。リーダーシップを発揮します。新卒社員研修の時はグループ開発の時にリーダーを買ってでました。積極性も人間性も抜群です。周りに対する不満も聞いたことがありません。</span>
+							      <input type="text" name="characteristics" th:value="${employee.characteristics}">
 							    </td>
 							  </tr>
 							  <tr>
@@ -161,7 +160,7 @@
 									</label>
 									<label class="control-label" style="color: red" for="dependentsCount"></label>
 									<input type="hidden" name="id" th:value="${employee.id}">
-									<input type="text" name="dependentsCount" id="dependentsCount" class="form-control" value="3" th:value="${employee.dependentsCount}" th:field="*{dependentsCount}">
+									<input type="text" name="dependentsCount" id="dependentsCount" class="form-control" value="3" th:value="${employee.dependentsCount}">
 							    </td>
 							  </tr>
 							</table>
